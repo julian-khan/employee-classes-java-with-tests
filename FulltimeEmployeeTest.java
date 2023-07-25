@@ -53,9 +53,32 @@ public class FulltimeEmployeeTest {
     }
     
     @Test
+    @DisplayName("Check when a valid salary is provided")
     public void testSetAnnualSalary() {
         float annualSalary = 100000.25f;
         bob.setAnnualSalary(annualSalary);
         assertTrue(bob.getAnnualSalary() == annualSalary);
+    }
+
+    @Test
+    @DisplayName("Test if a negative salary is entered")
+    public void testNegativeSalary() {
+        bob.setAnnualSalary(-50);
+        assertFalse(bob.getAnnualSalary() == -50);
+    }
+    
+    @Test
+    @DisplayName("Check if a $0 salary is entered")
+    public void testZeroSalary() {
+        bob.setAnnualSalary(0.10f);
+        System.out.println(bob.getAnnualSalary());
+        assertFalse(bob.getAnnualSalary() == 0.10f);
+    }
+    
+    @Test
+    @DisplayName("Check if a salary that is too low is entered")
+    public void testSalaryTooLow() {
+        bob.setAnnualSalary(101f);
+    assertFalse(bob.getAnnualSalary() == 101f);
     }
 }

@@ -22,8 +22,17 @@ public class FulltimeEmployee extends Employee {
     }
 
     public void setAnnualSalary(float salary) {
+        if (!isValidSalary(salary)) {
+            return;
+        }
         this.annualSalary = salary;
     }
 
+    private boolean isValidSalary(float salary) {
+        if (25000f <= salary) {
+            return true;
+        }
+        return false;
+    }
 
 }
