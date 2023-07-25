@@ -21,5 +21,9 @@ public class FulltimeEmployee extends Employee {
         return this.isPermanent;
     }
 
+    public void setAnnualSalary(float salary) {
+        this.annualSalary = salary;
+    }
+
 
 }

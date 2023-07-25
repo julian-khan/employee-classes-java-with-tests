@@ -47,9 +47,15 @@ public class FulltimeEmployeeTest {
     @DisplayName("Default constructor initialises values as expected")
     public void testDefaultConstructor() {
         FulltimeEmployee jess = new FulltimeEmployee();
-        assertAll("Check internal state", 
-        () -> assertEquals(jess.getAnnualSalary(), 0),
-        () -> assertTrue(jess.getIsPermanent() == false)
-        );
+        assertAll("Check internal state",
+                () -> assertEquals(jess.getAnnualSalary(), 0),
+                () -> assertTrue(jess.getIsPermanent() == false));
+    }
+    
+    @Test
+    public void testSetAnnualSalary() {
+        float annualSalary = 100000.25f;
+        bob.setAnnualSalary(annualSalary);
+        assertTrue(bob.getAnnualSalary() == annualSalary);
     }
 }
