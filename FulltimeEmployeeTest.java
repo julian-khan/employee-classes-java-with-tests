@@ -29,18 +29,27 @@ public class FulltimeEmployeeTest {
     public void testGetEmployeeId() {
         assertTrue(bob
 
-        .getEmployeeId() == 12435);
+        .getEmployeeId() == 41234);
     }
 
     @Test
-    @DisplayName("Check that the default constructor can be used")
+    @DisplayName("Check that the default constructor of the base class can be used")
     public void testUseDefaultConstructor() {
         Employee todd = new FulltimeEmployee();
         assertAll(
-                "Check that the private instance variables are properly instantiated", 
-                () -> assertTrue( todd.getFirstName() == ""),
+                "Check that the private instance variables are properly instantiated",
+                () -> assertTrue(todd.getFirstName() == ""),
                 () -> assertTrue(todd.getLastName() == ""),
-                () -> assertTrue(todd.getEmployeeId() == 0)
-                );
+                () -> assertTrue(todd.getEmployeeId() == 0));
+    }
+    
+    @Test
+    @DisplayName("Default constructor initialises values as expected")
+    public void testDefaultConstructor() {
+        FulltimeEmployee jess = new FulltimeEmployee();
+        assertAll("Check internal state", 
+        () -> assertEquals(jess.getAnnualSalary(), 0),
+        () -> assertTrue(jess.getIsPermanent() == false)
+        );
     }
 }
