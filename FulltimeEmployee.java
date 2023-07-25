@@ -1,3 +1,3 @@
-public class FulltimeEmployee {
+public class FulltimeEmployee extends Employee {
     
 }

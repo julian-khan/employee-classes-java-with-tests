@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FulltimeEmployeeTest {
 
-    private FullTimeEmployee bob
+    private FulltimeEmployee bob
 
-     = new Employee("Bob", "Kent", 41234);
+     = new FulltimeEmployee("Bob", "Kent", 41234);
 
     @Test
     @DisplayName("Check that the Employee getFirstName method works")
@@ -35,7 +35,7 @@ public class FulltimeEmployeeTest {
     @Test
     @DisplayName("Check that the default constructor can be used")
     public void testUseDefaultConstructor() {
-        Employee todd = new Employee();
+        Employee todd = new FulltimeEmployee();
         assertAll(
                 "Check that the private instance variables are properly instantiated", 
                 () -> assertTrue( todd.getFirstName() == ""),
