@@ -28,14 +28,11 @@ public class EmployeeTest {
     @DisplayName("Check that the default constructor can be used")
     public void testUseDefaultConstructor() {
         Employee jane = new Employee();
-        assertAll("Check that the private instance variables are propertly instantiated", 
-            () -> assertTrue( jane.getFirstName() == ""),
+        assertAll(
+                "Check that the private instance variables are properly instantiated", 
+                () -> assertTrue( jane.getFirstName() == ""),
                 () -> assertTrue(jane.getLastName() == ""),
                 () -> assertTrue(jane.getEmployeeId() == 0)
-        );
+                );
     }
-    
-
-
-
 }
