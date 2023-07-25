@@ -12,4 +12,12 @@ public class Employee {
     public String getFirstName() {
         return firstName;
     }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
 }
