@@ -3,6 +3,12 @@ public class Employee {
     private String lastName;
     private int employeeId;
 
+    public Employee() {
+        this.firstName = "";
+        this.lastName = "";
+        this.employeeId = 0;
+    }
+
     public Employee(String firstName, String lastName, int employeeId) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -20,4 +26,6 @@ public class Employee {
     public int getEmployeeId() {
         return employeeId;
     }
+
+
 }
