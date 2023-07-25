@@ -1,2 +1,2 @@
 # employee-classes-java-with-tests
-In this project, I demonstrate my knowledge and skills with test-driven development (TDD), unit testing, Java, object-oriented programming (OOP) and the SOLID principles.
+In this project, I demonstrate my knowledge and skills with test-driven development (TDD), unit testing, Git version control and best practices such as feature branching and good commit messages, Java, object-oriented programming (OOP) and the SOLID principles.
