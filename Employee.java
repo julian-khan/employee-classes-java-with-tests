@@ -26,4 +26,7 @@ public class Employee {
     public int getEmployeeId() {
         return employeeId;
     }
+
+    /* Setter methods would normally be required for a class
+    such as this to modify instances' internal state. */
 }
